@@ -1,6 +1,6 @@
 function removeDuplicates(nums: number[]): number {
     let visited = {}
-    let newArr = []
+    let newArr: number[] = []
     for(let i = 0; i < nums.length; i++) {
         if(!visited[nums[i]])  {
             visited[nums[i]] = true

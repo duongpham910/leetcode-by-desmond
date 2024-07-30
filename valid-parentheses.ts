@@ -2,22 +2,22 @@
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function(s) {
-    var chars = s.split("")
-    var stack = []
-    var openBracket = ''
-    var correctPair = {
+let isValid = function(s: string) {
+    let chars: string[] = s.split("")
+    let stack: string[] = []
+    let openBracket = ''
+    let correctPair = {
         '{': '}',
         '(': ')',
         '[': ']',
     }
-    var openBrackets = ['{', '(', '[']
-    var result = true
+    let openBrackets = ['{', '(', '[']
+    let result = true
     chars.forEach(char => {
         if (openBrackets.includes(char)) {
             stack.push(char)
         } else {
-            openBracket = stack.pop()
+            openBracket = stack.pop() || ''
             if (correctPair[openBracket] !== char) result = false
         }
     })
