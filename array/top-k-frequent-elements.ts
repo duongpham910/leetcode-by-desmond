@@ -1,4 +1,4 @@
-function topKFrequent(nums: number[], k: number): number[] {
+function topKFrequentElement(nums: number[], k: number): number[] {
     if(nums.length == k) return nums
 
     let mapObj = new Map();

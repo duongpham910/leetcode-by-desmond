@@ -1,7 +1,7 @@
-function topKFrequent(words: string[], k: number): string[] {
+function topKFrequentWord(words: string[], k: number): string[] {
 
     let mapObj = new Map();
-    let result = []
+    let result: string[][] = []
 
     for(let i = 0; i < words.length; i++){
         if(mapObj.has(words[i])) {
