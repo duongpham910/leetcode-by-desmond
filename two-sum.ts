@@ -1,5 +1,5 @@
 function twoSum(nums: number[], target: number): number[] {
-    let result = []
+    let result: number[] = []
     let map = {}
     for (let i = 0; i < nums.length; i++) {
         map[nums[i]] = i

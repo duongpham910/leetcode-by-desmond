@@ -1,12 +1,12 @@
-let tempArr = []
-let resulrArr = []
+let tempArr: number[] = []
+let resulrArr: number[][] = []
 
 function permute(nums: number[]): number[][] {
     resulrArr = []
     for(let i = 0; i < nums.length; i++) {
         let copy = nums.slice();
         let number = copy.splice(i, 1)
-        tempArr = [number]
+        tempArr = [number[0]]
         backtracking(copy)
     }
     return resulrArr
@@ -22,7 +22,7 @@ function backtracking(arr: number[]) {
     while(i < arr.length) {
         let copy = arr.slice();
         let number = copy.splice(i, 1)
-        tempArr.push(number)
+        tempArr.push(number[0])
         backtracking(copy)
         tempArr.pop()
         i++

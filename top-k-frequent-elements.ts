@@ -2,7 +2,7 @@ function topKFrequent(nums: number[], k: number): number[] {
     if(nums.length == k) return nums
 
     let mapObj = new Map();
-    let result = []
+    let result: number[] = []
     for(let i = 0; i < nums.length; i++){
         if(mapObj.has(nums[i])) {
             mapObj.set(nums[i], mapObj.get(nums[i]) + 1)

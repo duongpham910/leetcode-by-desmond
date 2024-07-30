@@ -1,5 +1,5 @@
-let stack = []
-let res = []
+let stack: string[] = []
+let res: string[] = []
 function generateParenthesis(n: number): string[] {
     stack = []
     res = []

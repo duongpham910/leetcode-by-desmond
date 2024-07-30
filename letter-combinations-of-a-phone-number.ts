@@ -16,11 +16,11 @@ function letterCombinations(digits: string): string[] {
     if (arr.length == 1) return keyboard[arr[0]]
 
     
-    let result = []
+    let result : string[]= []
     for(let i = 0; i < arr.length; i++) {
         if (keyboard[arr[i]]) {
             let kbArray = keyboard[arr[i]]
-            let tempResult = []
+            let tempResult: string[] = []
 
             if (result.length == 0) tempResult = kbArray
             
