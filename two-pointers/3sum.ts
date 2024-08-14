@@ -1,5 +1,5 @@
 function threeSum(nums: number[]): number[][] {
-    let final = []
+    let final: number[][] = []
     nums = nums.sort((a,b) => a - b)
 
     for (let i = 0; i < nums.length; i++) {

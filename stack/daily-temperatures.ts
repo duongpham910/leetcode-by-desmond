@@ -5,7 +5,7 @@ function dailyTemperatures(temperatures: number[]): number[] {
         let cur = temperatures[i]
         while(stack.length != 0 && cur > temperatures[stack[stack.length - 1]]) {
             let index = stack.pop()
-            result[index] = i - index
+            if(index) result[index] = i - index
         }
         stack.push(i)
     }

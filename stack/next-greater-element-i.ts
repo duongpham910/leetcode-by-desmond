@@ -10,7 +10,7 @@ function nextGreaterElement(nums1: number[], nums2: number[]): number[] {
         let cur = nums2[i]
         while (stack.length != 0 && cur > stack[stack.length - 1]) {
             let val = stack.pop()
-            result[obj[val]] = cur
+            if(val) result[obj[val]] = cur
         }
         if (nums1.includes(cur)) stack.push(cur)
     }

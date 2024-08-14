@@ -1,5 +1,5 @@
 function maxProfit(prices: number[]): number {
-    let minStack = []
+    let minStack: number[] = []
     let profit = 0
     for (let i = 0; i < prices.length; i++) {
         let cur = prices[i]
